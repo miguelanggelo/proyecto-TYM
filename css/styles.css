@@ -94,7 +94,7 @@ h4 {
 }
 
 .site-header {
-    /*background-color: ;*/
+    background-color: #333333;
     padding: 1rem 0 3rem 0;
 }
 
@@ -104,6 +104,17 @@ h4 {
    background-size: cover;
    height: 100vh;
    min-height: 60rem;
+   position: relative;
+}
+
+.site-header.inicio::after {
+    content: '';
+    background-color: rgba(255,255,255, .2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .contenido-header {
@@ -112,6 +123,8 @@ h4 {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 @media (min-width: 768px) {
     .contenido-header {
@@ -209,6 +222,11 @@ header #logo img {
 }
 .iconos {
     font-size: 3rem;
+}
+
+.servicios p {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
 }
 
 /** NOSOTROS **/
@@ -313,6 +331,37 @@ textarea {
     align-items: center;
 }
 
+.boton {
+    background-color: #FF5F1F;
+    padding: 1rem 3rem;
+    display: block;
+    margin-top: 1rem;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: none;
+    flex: 0 0 100%;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
 /** FOOTER **/
 .site-footer {
     background-color: #000000;
@@ -327,6 +376,28 @@ textarea {
     text-align: center;
 }
 
+/** MENSAJE ENVIADO **/
+.mensaje-exito {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
 
+.mensaje-exito h1 {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+.mensaje-exito a {
+    display: block;
+    padding: 10px 30px;
+    background: #FF5F1F;
+    text-decoration: none;
+    color: #ffffff;
+}
 

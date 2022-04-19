@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- INICIO HEADER -->
     <header class="site-header inicio" id="inicio">
         <div class="contenedor contenido-header">
             <div class="barra">
@@ -34,7 +35,9 @@
             </div>
         </div>
     </header>
-    
+    <!-- FIN HEADER -->
+
+    <!-- INICIO SERVICIOS -->
     <main class="servicios" id="servicios">
         <h2>Nuestros Servicios</h2>
         <div class="contenedor-servicios">
@@ -62,7 +65,9 @@
             </div>
         </div>
     </main>
+    <!-- INICIO SERVICIOS -->
 
+    <!-- INICIO NOSOTROS -->
     <section class="contenedor" id="nosotros">
         <h2 class="centrar-texto">Sobre Nosotros</h2>
 
@@ -82,7 +87,9 @@
             </div>
         </article>
     </section>
+    <!-- FIN NOSOTROS -->
 
+    <!-- INICIO CONTACTO -->
     <section class="contenedor" id="contacto">
         <h2 class="centrar-texto">Contacto</h2>
 
@@ -107,27 +114,32 @@
             </div>
 
             <div class="columnas-8">
-                <form class="contacto" action="">
+                <form class="contacto" action="enviar.php" method="post">
                     <fieldset>
                         <legend>Informacion personal</legend>
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" placeholder="Tu nombre">
+                        <input type="text" id="nombre" placeholder="Tu nombre" required name="nombre">
         
                         <label for="email">E-mail:</label>
-                        <input type="email" id="email" placeholder="Tu correo electronico" required>
+                        <input type="email" id="email"
+                        placeholder="Tu correo electronico" required name="correo">
         
                         <label for="telefono">Telefono:</label>
-                        <input type="tel" id="telefono" placeholder="Tu telefono" required>
+                        <input type="tel" id="telefono" placeholder="Tu telefono" required name="telefono">
         
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje"></textarea>
-
-                        <button type="submit" id="submit">Enviar</button>
+                        <textarea id="mensaje" required name="mensaje"></textarea>
+                        
+                        <div class="enviar">
+                            <input type="submit" class="boton" value="Enviar">
+                        </div>
                     </fieldset>
             </div>
         </article>
     </section>
+    <!-- FIN CONTACTO -->
     
+    <!-- INICIO FOOTER -->
     <footer class="site-footer">
         <div class="contenedor">
             <div class="barra">
@@ -135,5 +147,6 @@
             </div>
         </div>
     </footer>
+    <!-- FIN FOOTER -->
 </body>
 </html>
